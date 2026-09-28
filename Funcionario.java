@@ -4,60 +4,60 @@ public class Funcionario {
     private int id;
     private String nome;
     private String cpf;
-    private Double salario;
+    private double salario;
     private String cargo;
 
-  public Funcionario(int id) {
+
+
+
+  public Funcionario(int id, String nome, String cpf, double salario, String cargo) {
      this.id = id;
+     this.nome = nome;
+     this.cpf = cpf;
+     this.salario = salario;
+     this.cargo = cargo;
+     
     
   }
-// // ID
 
-//   public void setId(int id) {
-// 	  this.id = id;
-//   }
 
-//   public int getId() {
-// 	  return id;
-//   }
+  public int getId() {
+	  return id;
+  }
 
-//   // NOME
 
-//    public void setNome(String nome) {
-// 	  this.nome = nome;
-//   }
+  public String getNome() {
+	  return nome;
+  }
 
-//   public String getNome() {
-// 	  return nome;
-//   }
 
-//   // CPF
+  public String getCpf() {
+	  return cpf;
+  }
 
-//   public void setCpf(String cpf) {
-// 	  this.cpf = cpf;
-//   }
 
-//   public String getCpf() {
-// 	  return cpf;
-//   }
+  public Double getSalario() {
+	  return salario;
+  }
 
-//     // SALARIO
 
-//   public void setSalario(Double salario) {
-// 	  this.salario = salario;
-//   }
+  public String getCargo() {
+	  return cargo;
+  }
 
-//   public Double getSalario() {
-// 	  return salario;
-//   }
+  public double getSalarioAnual() {
+    return salario * 12;
+  }
 
-//     // CARGO
+    void aumentarSalario(double percentual) {
 
-//   public void setCargo(String cargo) {
-// 	  this.cargo = cargo;
-//   }
+      if (percentual <= 0){
+         throw new IllegalArgumentException("valor invalido");
+      }else{
+        salario += salario / 100 * percentual;
+  
+    }
+  }
 
-//   public String getCargo() {
-// 	  return cargo;
-//   }
+
 }
