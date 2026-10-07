@@ -5,6 +5,7 @@ public static void main(String[] args) {
     Funcionario pessoa1 = new Funcionario(5, "joão","12345678900", 15000,"desenvolvedor");
     Funcionario pessoa2 = new Funcionario(3, "igor","123456774", 10000,"desenvolvedor web");
     Funcionario pessoa3 = new Funcionario(2, "maria","123456777", 8000,"desenvolvedor java");
+    Gerente pessoa4 = new Gerente(1, "Paulo", "88888888", 20000,"gerente", "Senior");
 
 
     System.out.println(pessoa1.getId());
@@ -25,9 +26,18 @@ public static void main(String[] args) {
     System.out.println(pessoa3.getSalario());
     System.out.println(pessoa3.getCargo());
 
+    System.out.println(pessoa4.getId());
+    System.out.println(pessoa4.getNome());
+    System.out.println(pessoa4.getCpf());
+    System.out.println(pessoa4.getSalario());
+    System.out.println(pessoa4.getCargo());
+    System.out.println(pessoa4.getNivel());
+
     System.out.println(pessoa1.getSalarioAnual());
     System.out.println(pessoa2.getSalarioAnual());
     System.out.println(pessoa3.getSalarioAnual());
+
+  
 
     System.out.println(pessoa1.getSalario());
 
